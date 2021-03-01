@@ -5,13 +5,25 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
+    <form action="/movies">
+      <button type="submit">Back to Meny</button>
+      <!-- <input type="button" value="Back to Menu"> -->
+    </form>
+
     <h1>Add New Movie</h1>
-    <form action="/login/addMovie" method="POST">
+    <form action="/movies/addMovie" method="POST">
       Name: <input type="text" name="moviename"><br/>
       Language: <input type="text" name="movielanguage"><br/>
       Genres: <select name="genres">
         <option value="comedy">Comedy</option>
         <option value="family">Family</option>
+        <option value="action">Action</option>
+        <option value="drama">Drama</option>
+        <option value="fantasy">Fantasy</option>
+        <option value="horror">Horror</option>
+        <option value="mystery">Mystery</option>
+        <option value="romance">Romance</option>
+        <option value="thriller">Thriller</option>
       </select><br/>
       <input type="submit" value="Add New Movie">
     </form>
