@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+      <h1>Menu Page</h1>
+      <li><a href="/login/searchmovie">Search A Movie</a></li>
+      <li><a href="/login/createmovie">Create A Movie</a></li>
+      <% if(data == 'isAdmin') { %>
+      <li><a href="/login/userManagement">Users Management Page</a></li>
+      <% } %>
+
+
+  </body>
+</html>

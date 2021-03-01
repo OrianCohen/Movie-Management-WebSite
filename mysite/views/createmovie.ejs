@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add New Movie</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Add New Movie</h1>
+    <form action="/login/addMovie" method="POST">
+      Name: <input type="text" name="moviename"><br/>
+      Language: <input type="text" name="movielanguage"><br/>
+      Genres: <select name="genres">
+        <option value="comedy">Comedy</option>
+        <option value="family">Family</option>
+      </select><br/>
+      <input type="submit" value="Add New Movie">
+    </form>
+  </body>
+</html>

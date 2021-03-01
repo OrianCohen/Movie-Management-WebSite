@@ -1,0 +1,18 @@
+{
+    "users": [{
+        "id":3,
+        "username":"orianc",
+        "password":"abc",
+        "creatdData": "yes",
+        "numOfTransaction": 4,
+        "isAdmin": true
+    },
+    {
+        "id":2,
+        "username":"test",
+        "password":"abc",
+        "creatdData": "yes",
+        "numOfTransaction": 4,
+        "isAdmin": false
+    }]
+}
