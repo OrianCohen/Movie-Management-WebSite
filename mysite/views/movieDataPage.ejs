@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Data Page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/movies">
+      <button type="submit">Back to Menu</button>
+    </form>
+
+
+    <h1>Movie Data Page</h1>
+<%= datax %>
+        <ul>
+          <% datax.forEach(elem => {%>
+
+          
+           <ui>ID: <%= elem.id %></ui> <br/>
+           <ui>NAME: <%= elem.name %></ui> <br/>
+           <ui>Genres: <%= elem.name %></ui> <br/>
+           <ui>Language: <%= elem.language %></ui> <br/>
+          <%});%>  
+        </ul>
+
+
+  </body>
+</html>

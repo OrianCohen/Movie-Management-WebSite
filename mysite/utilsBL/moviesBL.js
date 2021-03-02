@@ -30,37 +30,33 @@ exports.searchMovieJsonFile = async function(){
 }
 
 // Get all movies data from REST API (web services)
-exports.searchMovieRestApiUtil = async function(nameSearchMovie,languageSearch,genreSearch){
+exports.searchMovieRestApiUtil = async function(){
     let resp1 = await movieDAL.searchMovieRestApi();
     let MoviesData = resp1.data;
-    let finalData2 = await MoviesData.filter(x=> x.name == nameSearchMovie && x.language == languageSearch)
-    let getAllDataGenrs = await MoviesData.filter(function(element){
-        element.geners.forEach(x => {
-            if(x == genreSearch)
-                return element
-        });
-    })
-    // console.log('testing')
-    // console.log(finalData2)
-    // console.log(getAllDataGenrs)
-
-    console.log('testing')
-    console.log(finalData2)
-    console.log('testing')
-
-    console.log(getAllDataGenrs)
-    return resp1
-    // try{
-    //     let moviesAPI = await movieDAL.searchMovieRestApi()
-    //     return(moviesAPI)
-    // }
-    // catch(err){
-    //     return(err)
-    // }
-
+    return MoviesData;
 }
 
+exports.getSearchMovieByUserRequestAPI = async function(MoviesData, nameMovie,languageSearch,genreSearch){
+    let data = await MoviesData.filter(x=> x.name == nameMovie && x.language == languageSearch && x.genres.includes(genreSearch));
+    return data;
+}
 
+exports.getSearchMoviesBySameGenresAPI = async function(MoviesData, genreSearch){
+    let data = await MoviesData.filter((res) =>
+    {
+        if(res.genres){
+            if(res.genres.includes(genreSearch)){
+                return res
+            }
+        }
+    });   
+    return data;
+}
+
+exports.getMovieByID = async function(data,id){
+    let movieData = await data.filter(x=> x.id == id)
+    return movieData;
+}
 
 
 // exports.getLastId = async function(){

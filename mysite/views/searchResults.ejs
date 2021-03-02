@@ -7,20 +7,41 @@
     <body>
         <form action="/movies">
             <button type="submit">Back to Meny</button>
-            <!-- <input type="button" value="Back to Menu"> -->
           </form>
 
         <h1>Search Results Page</h1>
 
         <table border="1">
             <tr>
-                <th>Movie details</th>
-                <th>All movied with the same genre</th>
+                <th>Movies details</th>
             </tr>
-
+            <!-- <% dataJson.forEach(function(movie) {%>
+                <tr>
+                   <td><a href="/movies/movieDataPageById/<%= movie.id %>"><%= movie.Name %></a></td> 
+                </tr>
+            <% }) %> -->
+             <% dataAPI.forEach(function(movie) {%>
+                <tr>
+                   <td><a href="/movies/movieDataPageById/<%= movie.id %>"><%= movie.name %></a></td> 
+                </tr>
+            <% }) %> 
         </table>
 
-
+        <table border="1">
+            <tr>
+                <th>All movies from the same genres</th>
+            </tr>
+            <!-- <% dataJsonGenres.forEach(function(elem) {%>
+                <tr>
+                    <td><a href="/movies/movieDataPageById/<%= elem.id %>"+ elem.id><%= elem.Name %></a></td> 
+                </tr>
+            <% }) %> -->
+            <% DataAPIGenres.forEach(function(elem) {%>
+                <tr>
+                    <td><a href="/movies/movieDataPageById/<%= elem.id %>" ><%= elem.name %></a></td> 
+                </tr>
+            <% }) %> -->
+        </table>
 
     </body>
 </html>

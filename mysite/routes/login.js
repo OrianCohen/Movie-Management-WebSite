@@ -45,49 +45,6 @@ router.post('/getdata', async function(req,res,next){
 });
 
 
-// router.get('/createmovie', function(req, res, next) {
-//     res.render('createmovie', { });
-//   });
-
-// // get data for new movie --> connect with moviesBL
-// router.post('/addMovie', async function(req, res, next) {
-//     let name = req.body.moviename;
-//     let language = req.body.movielanguage;
-//     let geners = req.body.genres;
-//     let sess = req.session;
-
-//     let result = await movieBL.createMovie(name, language, geners);
-//     if(result == 'Created!'){
-//         if(sess.admin){
-//             res.render('menu', {data : 'isAdmin'})
-//         }
-//         else{
-//             res.render('menu', {data : 'isNotAdmin'})
-//         }
-        
-//     }
-//     else {
-//         res.render('createmovie', { });
-//     }
-// });
-
-
-
-// router.get('/searchmovie', function(req, res, next) {
-//     res.render('searchmovie', { });
-//   });
-
-//   //get data for search a movie
-//   router.post('/getMovie', async function(req, res, next) {
-//       let nameSearchMovie = req.body.searchName
-//       let genreSearch = req.body.searchGenre
-//       let languageSearch = req.body.searchLang
-//     let result = await movieBL.searchMovie(nameSearchMovie,genreSearch,languageSearch)
-//     console.log(result)
-//     res.render('searchResults', { data: 'result'});
-//   });
-
-
 router.get('/userManagement', function(req, res, next) {
     res.render('userManagement', { });
   });
