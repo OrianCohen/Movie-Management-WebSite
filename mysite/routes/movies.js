@@ -82,8 +82,8 @@ router.get('/movieDataPageById/:id', async function(req, res, next){
     let id = req.params.id
     console.log(id)
     let resultAPI = await movieBL.searchMovieRestApiUtil()
-    let requireData = movieBL.getMovieByID(resultAPI,id)
-
+    let requireData = await movieBL.getMovieByID(resultAPI,id)
+    console.log(requireData)
     res.render('movieDataPage', {datax : requireData})
 });
 

@@ -17,13 +17,8 @@ router.post('/getdata', async function(req,res,next){
     console.log(valid)
     console.log(valid[0]['isAdmin'])
 
-    // let testUsers = await allUserDB.getAllUsersDB();
-    // console.log('users from db')
-    // console.log(testUsers)
-
     let sess = req.session;
   
-    
     if(valid.length >0)
     {
         if(!sess.counter ? sess.counter=1 : sess.counter+=1);
@@ -44,10 +39,5 @@ router.post('/getdata', async function(req,res,next){
     
 });
 
-
-router.get('/userManagement', function(req, res, next) {
-    res.render('userManagement', { });
-  });
-  
 
 module.exports = router;

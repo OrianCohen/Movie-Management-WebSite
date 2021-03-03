@@ -11,14 +11,11 @@
 
 
     <h1>Movie Data Page</h1>
-<%= datax %>
         <ul>
           <% datax.forEach(elem => {%>
-
-          
            <ui>ID: <%= elem.id %></ui> <br/>
            <ui>NAME: <%= elem.name %></ui> <br/>
-           <ui>Genres: <%= elem.name %></ui> <br/>
+           <ui>Genres: <%= elem.genres %></ui> <br/>
            <ui>Language: <%= elem.language %></ui> <br/>
           <%});%>  
         </ul>

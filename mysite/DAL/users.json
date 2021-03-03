@@ -1,18 +1,1 @@
-{
-    "users": [{
-        "id":3,
-        "username":"orianc",
-        "password":"abc",
-        "creatdData": "yes",
-        "numOfTransaction": 4,
-        "isAdmin": true
-    },
-    {
-        "id":2,
-        "username":"test",
-        "password":"abc",
-        "creatdData": "yes",
-        "numOfTransaction": 4,
-        "isAdmin": false
-    }]
-}
+{"users":[{"id":1,"username":"orianc","password":"abc","creatdData":"yes","numOfTransaction":4,"isAdmin":true},{"id":3,"username":"karin","password":"ass","createData":"21y-03-03 7:44:33","numOfTransaction":5,"isAdmin":false},{"id":"2","username":"testrrr","password":"abcיי","numOfTransaction":"4"},{"id":3,"username":"Omerom","password":"122","createData":"21y-03-03 8:56:01","numOfTransaction":5,"isAdmin":false}]}

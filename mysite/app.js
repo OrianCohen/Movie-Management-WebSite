@@ -8,6 +8,7 @@ var session = require('express-session')
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login')
 var moviesRouter = require('./routes/movies')
+var usersManagementRouter = require('./routes/users')
 
 var app = express();
 
@@ -26,6 +27,7 @@ app.use(session({secret: 'my-secret'}))
 app.use('/', indexRouter);
 app.use('/login', loginRouter);
 app.use('/movies', moviesRouter);
+app.use('/users', usersManagementRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

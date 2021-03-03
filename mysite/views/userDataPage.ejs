@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>user data page</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form action="/users">
+      <button type="submit">Back to Menu</button>
+    </form>
+    <h1>User Data Page</h1>
+
+    <!-- If the user redirect from add new user link -->
+    <% if(data == 'AddUser') { %>
+        <form action="/users/addNewUserData" method="POST">
+          User Name: <input type="text" name="username"><br/>
+          Password: <input type="text" name="pwd"><br/>
+          <input type="submit" value="Save">
+
+        </form>
+      <% } %>
+
+    <!-- If the user redirect from update user link -->
+    <% if(data == 'updateUsr') { %>
+      <form action="/users/updateUserData/<%=user.id%>/" method="POST">
+        id: <%=user.id%> <br/>
+        User Name: <input type="tesxt" name="username" value="<%= user.username %>"><br/>
+        Password: <input type="text" name="pwd" value="<%= user.password %>"><br/>
+        Number of transation: <input type="text" name="txid" value="<%= user.numOfTransaction %>"><br/>
+        <input type="submit" value="Save">
+      </form>
+    <% } %>
+
+  </body>
+</html>

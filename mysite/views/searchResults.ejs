@@ -15,11 +15,11 @@
             <tr>
                 <th>Movies details</th>
             </tr>
-            <!-- <% dataJson.forEach(function(movie) {%>
+            <% dataJson.forEach(function(movie) {%>
                 <tr>
                    <td><a href="/movies/movieDataPageById/<%= movie.id %>"><%= movie.Name %></a></td> 
                 </tr>
-            <% }) %> -->
+            <% }) %>
              <% dataAPI.forEach(function(movie) {%>
                 <tr>
                    <td><a href="/movies/movieDataPageById/<%= movie.id %>"><%= movie.name %></a></td> 
@@ -31,11 +31,11 @@
             <tr>
                 <th>All movies from the same genres</th>
             </tr>
-            <!-- <% dataJsonGenres.forEach(function(elem) {%>
+            <% dataJsonGenres.forEach(function(elem) {%>
                 <tr>
-                    <td><a href="/movies/movieDataPageById/<%= elem.id %>"+ elem.id><%= elem.Name %></a></td> 
+                    <td><a href="/movies/movieDataPageById/<%= elem.id %>"><%= elem.Name %></a></td> 
                 </tr>
-            <% }) %> -->
+            <% }) %>
             <% DataAPIGenres.forEach(function(elem) {%>
                 <tr>
                     <td><a href="/movies/movieDataPageById/<%= elem.id %>" ><%= elem.name %></a></td> 

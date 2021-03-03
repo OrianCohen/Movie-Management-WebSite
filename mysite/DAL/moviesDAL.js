@@ -6,7 +6,6 @@ const axiosDAL = require('axios')
 
 //connect with our json file, write to file the new movie
 exports.addNewMovie = function(obj){
-
 return new Promise((results,reject)=> {
     jfile.readFile(__dirname+ '/newMovies.json', function(err,data){
         if(err) //if we dont have any file with this name

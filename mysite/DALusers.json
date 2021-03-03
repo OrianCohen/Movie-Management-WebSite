@@ -1,0 +1,1 @@
+{"users":[{"id":1,"username":"orianc","password":"abc","creatdData":"yes","numOfTransaction":4,"isAdmin":true},{"id":2,"username":"test","password":"abc","creatdData":"yes","numOfTransaction":4,"isAdmin":false},{"id":3,"username":"orel","password":"wss","createData":"21y-03-03 5:06:18","numOfTransaction":5,"isAdmin":false}]}

@@ -6,8 +6,24 @@
   </head>
   <body>
     <form action="/movies">
-      <button type="submit">Back to Meny</button>
+      <button type="submit">Back to Menu</button>
     </form>
-    <h1>user management page</h1>
+    <h1>User Management Page</h1>
+
+    <ul>
+    <% users.forEach(function(elem) {%>
+      <li>   <%= elem.username %>  </li>
+      <!-- <form action="/users/deleteUser/<%= elem.id %>/" method="GET"> -->
+      <a href="/users/deleteUser/<%= elem.id %>">Delete</a>
+      </form>
+      <!-- <form action="/users/updateUser/<%= elem.id %>/" method="POST"> -->
+        <a href="/users/updateUserById/<%= elem.id %>">Update</a>
+        </form>
+    <% }) %>
+  </ul>
+
+  <form action="/users/addNewUser/">
+    <button type="submit">Add New User</button>
+  </form>
   </body>
 </html>
